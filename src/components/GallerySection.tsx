@@ -31,7 +31,7 @@ export function GallerySection() {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-heading text-white mb-4 sm:mb-6"
           >
-            Past <span className="text-accent italic font-serif">Journeys</span>
+            A Glimpse of <span className="text-accent italic font-serif">Luxury</span>
           </motion.h2>
         </div>
 

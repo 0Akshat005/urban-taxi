@@ -167,15 +167,12 @@ export function HeroSection() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-heading text-accent md:text-white mb-2 sm:mb-3 md:mb-4 leading-[1.15] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:drop-shadow-none">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-heading text-accent md:text-white mb-3 sm:mb-4 md:mb-5 leading-[1.15] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:drop-shadow-none">
               Travel Together.
             </h1>
 
-            {/* Tagline & Subtitle */}
-            <div className="mb-4 sm:mb-5 md:mb-8 space-y-1.5 sm:space-y-3 md:space-y-5 flex flex-col items-center md:items-start">
-              <p className="text-accent md:text-gray-300 text-xs sm:text-sm max-w-[280px] sm:max-w-sm leading-relaxed font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:drop-shadow-none">
-                Luxury rides for group travel, corporate trips, family vacations, weddings, and more.
-              </p>
+            {/* Tagline */}
+            <div className="mb-5 sm:mb-6 md:mb-8 flex flex-col items-center md:items-start">
               <h3 className="text-base sm:text-lg md:text-2xl text-white md:text-accent font-heading tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:drop-shadow-lg max-w-[300px] sm:max-w-sm md:max-w-md leading-relaxed">
                 "Anywhere from Nagpur. Everywhere with Comfort."
               </h3>
