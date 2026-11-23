@@ -178,61 +178,65 @@ export function HeroSection() {
               </h3>
             </div>
 
-            {/* Vehicle Rates - Balanced 2-card layout */}
-            <div className="grid grid-cols-2 gap-2 sm:gap-3 w-full mb-4 sm:mb-5 md:mb-8">
-              <div className="bg-black/60 backdrop-blur-md border border-accent/25 rounded-xl p-2.5 sm:p-3.5 text-left flex flex-col justify-between">
-                <h4 className="text-accent text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mb-1.5 text-center sm:text-left">
-                  Force Urbania
-                </h4>
-                <div className="space-y-1 sm:space-y-1.5">
-                  <div className="text-[10px] sm:text-xs">
-                    <span className="text-gray-400">Local: </span>
-                    <strong className="text-accent font-sans font-semibold">₹8,400</strong>
-                    <span className="text-gray-400 text-[8px] sm:text-[9px] block sm:inline sm:ml-1">(8h / 80km)</span>
-                  </div>
-                  <div className="text-[10px] sm:text-xs pt-1 sm:pt-0 border-t sm:border-t-0 border-white/10">
-                    <span className="text-gray-400">Outstation: </span>
-                    <strong className="text-accent font-sans font-semibold">₹9,713</strong>
-                    <span className="text-gray-400 text-[8px] sm:text-[9px]">/day</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-black/60 backdrop-blur-md border border-accent/25 rounded-xl p-2.5 sm:p-3.5 text-left flex flex-col justify-between">
-                <h4 className="text-accent text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mb-1.5 text-center sm:text-left">
-                  Innova Crysta
-                </h4>
-                <div className="space-y-1 sm:space-y-1.5">
-                  <div className="text-[10px] sm:text-xs">
-                    <span className="text-gray-400">Local: </span>
-                    <strong className="text-accent font-sans font-semibold">₹2,414</strong>
-                    <span className="text-gray-400 text-[8px] sm:text-[9px] block sm:inline sm:ml-1">(4h / 40km)</span>
-                  </div>
-                  <div className="text-[10px] sm:text-xs pt-1 sm:pt-0 border-t sm:border-t-0 border-white/10">
-                    <span className="text-gray-400">Outstation: </span>
-                    <strong className="text-accent font-sans font-semibold">₹6,405</strong>
-                    <span className="text-gray-400 text-[8px] sm:text-[9px]">/day</span>
+            {/* Vehicle Rates & CTA - Two self-contained vertical cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-5 w-full mb-5 sm:mb-6 md:mb-8">
+              {/* Force Urbania Card */}
+              <div className="bg-black/60 backdrop-blur-md border border-accent/25 hover:border-accent/40 rounded-2xl p-4 sm:p-5 shadow-[0_4px_25px_rgba(0,0,0,0.5)] hover:shadow-[0_4px_30px_rgba(212,175,55,0.08)] transition-all duration-300 flex flex-col justify-between text-left">
+                <div>
+                  <h4 className="text-accent text-sm sm:text-base font-heading font-bold uppercase tracking-wider mb-2.5 sm:mb-3">
+                    Force Urbania
+                  </h4>
+                  <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
+                    <div>
+                      <span className="text-gray-300 font-light">Local: </span>
+                      <strong className="text-accent font-sans font-bold text-sm sm:text-base">₹8,400</strong>
+                      <span className="text-gray-400 font-light text-xs ml-1">(8h / 80km)</span>
+                    </div>
+                    <div>
+                      <span className="text-gray-300 font-light">Outstation: </span>
+                      <strong className="text-accent font-sans font-bold text-sm sm:text-base">₹9,713</strong>
+                      <span className="text-gray-400 font-light text-xs">/day</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            {/* Booking Buttons - Full width aligned */}
-            <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 mb-4 sm:mb-5 md:mb-8 w-full">
-              <button
-                onClick={() => setActiveService('urbania')}
-                className="w-full sm:flex-1 py-3 px-6 bg-accent text-primary font-bold uppercase tracking-widest text-[11px] md:text-xs hover:bg-white transition-colors flex items-center justify-center space-x-2 shadow-lg rounded-md cursor-pointer"
-              >
-                <span>Book Urbania</span>
-                <ArrowRight className="w-4 h-4 md:w-3.5 md:h-3.5" />
-              </button>
-              <button
-                onClick={() => setActiveService('crysta')}
-                className="w-full sm:flex-1 py-3 px-6 border border-accent/60 bg-black/40 sm:bg-transparent text-white font-bold uppercase tracking-widest text-[11px] md:text-xs hover:bg-accent/10 transition-colors flex items-center justify-center space-x-2 rounded-md cursor-pointer"
-              >
-                <span>Book Crysta</span>
-                <ArrowRight className="w-4 h-4 md:w-3.5 md:h-3.5 text-gray-400" />
-              </button>
+                <button 
+                  onClick={() => setActiveService('urbania')}
+                  className="w-full mt-4 sm:mt-5 py-2.5 sm:py-3 px-4 bg-accent text-primary font-bold uppercase tracking-widest text-[11px] sm:text-xs hover:bg-white transition-all flex items-center justify-center space-x-2 rounded-lg shadow-md cursor-pointer"
+                >
+                  <span>Book Urbania</span>
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                </button>
+              </div>
+
+              {/* Innova Crysta Card */}
+              <div className="bg-black/60 backdrop-blur-md border border-accent/25 hover:border-accent/40 rounded-2xl p-4 sm:p-5 shadow-[0_4px_25px_rgba(0,0,0,0.5)] hover:shadow-[0_4px_30px_rgba(212,175,55,0.08)] transition-all duration-300 flex flex-col justify-between text-left">
+                <div>
+                  <h4 className="text-accent text-sm sm:text-base font-heading font-bold uppercase tracking-wider mb-2.5 sm:mb-3">
+                    Innova Crysta
+                  </h4>
+                  <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
+                    <div>
+                      <span className="text-gray-300 font-light">Local: </span>
+                      <strong className="text-accent font-sans font-bold text-sm sm:text-base">₹2,414</strong>
+                      <span className="text-gray-400 font-light text-xs ml-1">(4h / 40km)</span>
+                    </div>
+                    <div>
+                      <span className="text-gray-300 font-light">Outstation: </span>
+                      <strong className="text-accent font-sans font-bold text-sm sm:text-base">₹6,405</strong>
+                      <span className="text-gray-400 font-light text-xs">/day</span>
+                    </div>
+                  </div>
+                </div>
+
+                <button 
+                  onClick={() => setActiveService('crysta')}
+                  className="w-full mt-4 sm:mt-5 py-2.5 sm:py-3 px-4 bg-accent text-primary font-bold uppercase tracking-widest text-[11px] sm:text-xs hover:bg-white transition-all flex items-center justify-center space-x-2 rounded-lg shadow-md cursor-pointer"
+                >
+                  <span>Book Crysta</span>
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                </button>
+              </div>
             </div>
 
             {/* Stats Row - 2x2 grid on mobile, 4-col on tablet/desktop */}
@@ -269,8 +273,8 @@ export function HeroSection() {
 
             {/* Contact Numbers - Stacked on mobile, side-by-side on sm+ */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-6 w-full">
-              <a 
-                href="tel:+919823959770" 
+              <a
+                href="tel:+919823959770"
                 className="flex items-center justify-center sm:justify-start space-x-2.5 bg-black/40 sm:bg-transparent border border-accent/20 sm:border-0 py-2 sm:py-0 px-3 sm:px-0 rounded-lg group transition-colors"
               >
                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-accent/15 border border-accent/30 flex items-center justify-center group-hover:bg-accent/25 transition-colors shrink-0">
@@ -280,8 +284,8 @@ export function HeroSection() {
                   +91 98239 59770
                 </span>
               </a>
-              <a 
-                href="tel:+919811612383" 
+              <a
+                href="tel:+919811612383"
                 className="flex items-center justify-center sm:justify-start space-x-2.5 bg-black/40 sm:bg-transparent border border-accent/20 sm:border-0 py-2 sm:py-0 px-3 sm:px-0 rounded-lg group transition-colors"
               >
                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-accent/15 border border-accent/30 flex items-center justify-center group-hover:bg-accent/25 transition-colors shrink-0">
