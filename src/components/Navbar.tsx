@@ -41,13 +41,20 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary/95 backdrop-blur-md py-1 shadow-lg shadow-black/50' : 'bg-gradient-to-b from-black/50 to-transparent pt-3 pb-1'
-        }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-primary/95 backdrop-blur-md py-2.5 sm:py-3 shadow-lg shadow-black/50'
+          : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-3 sm:py-4'
+      }`}
     >
-      <div className="w-full px-4 lg:px-8 flex items-center justify-between">
+      <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#" onClick={(e) => handleNavClick(e, '#')} className="flex items-center">
-            <img src="/logo.png" alt="Urban Taxi" className="h-14 sm:h-16 md:h-16 lg:h-24 w-auto object-contain origin-left scale-110 sm:scale-125 md:scale-150 ml-1 md:ml-0" />
+          <a href="#" onClick={(e) => handleNavClick(e, '#')} className="flex items-center group">
+            <img
+              src="/logo.png"
+              alt="Urban Taxi"
+              className="h-10 sm:h-11 md:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </a>
         </div>
 
